@@ -7,6 +7,7 @@ on:
     workflows: ["Duster Fix"]
     types:
       - completed
+  pull_request:
 
 jobs:
   test:
