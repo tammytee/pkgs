@@ -1,0 +1,29 @@
+name: PHPUnit
+
+on:
+  # Commits made in Duster Fix will not trigger any workflows
+  # This workflow is configured to run after Duster finishes
+  workflow_run:
+    workflows: ["Duster Fix"]
+    types:
+      - completed
+
+jobs:
+  test:
+    name: PHPUnit Test
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Setup PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '8.1'
+
+    - name: Install dependencies
+      run: composer install --prefer-dist --no-interaction --no-progress --no-suggest
+
+    - name: Run PHPUnit
+      run: vendor/bin/phpunit
