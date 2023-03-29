@@ -8,7 +8,7 @@ You may use the following credentials to log in and test the app:
 
 ```txt
 guest@pkgs.test
-start
+password
 ```
 
 ## Contributing
