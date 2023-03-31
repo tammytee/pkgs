@@ -12,7 +12,8 @@ class TrackerController extends Controller
 {
     public function __construct(
         protected Tracker $ship24,
-    ) {}
+    ) {
+    }
 
     public function track(Request $request)
     {
