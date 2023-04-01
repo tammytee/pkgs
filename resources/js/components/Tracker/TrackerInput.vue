@@ -1,13 +1,16 @@
 <template>
   <form @submit.prevent="form.post('/track', {onSuccess: () => form.reset()})">
-    <div>
-      <TextInput v-model="form.trackingNumber" type="text" class="block" />
-      <div v-if="form.errors.trackingNumber">{{ form.errors.trackingNumber }}</div>
+    <div class="flex items-center gap-4 mb-2">
+      <div>
+        <TextInput v-model="form.trackingNumber" type="text" placeholder="ex. EB783005170CN" class="block w-60" />
+      </div>
+      <div>
+        <PrimaryButton :disabled="form.processing || !form.trackingNumber" class="py-3">
+          Track Shipment
+        </PrimaryButton>
+      </div>
     </div>
-
-    <div class="flex items-center gap-4">
-      <PrimaryButton :disabled="form.processing || !form.trackingNumber">Track Package</PrimaryButton>
-    </div>
+    <div v-if="form.errors.trackingNumber" class="text-xs text-red-600">{{ form.errors.trackingNumber }}</div>
   </form>
 </template>
 
