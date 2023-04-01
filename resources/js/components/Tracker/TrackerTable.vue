@@ -16,7 +16,7 @@
     <template #rows>
       <tr v-for="pkg in packages" :key="pkg.number">
         <td class="px-2 py-2 text-sm text-gray-500 whitespace-nowrap">{{ pkg.number }}</td>
-        <td class="px-2 py-2 text-sm font-medium text-gray-900 whitespace-nowrap">Courier</td>
+        <td class="px-2 py-2 text-sm font-medium text-gray-900 whitespace-nowrap">{{ pkg.courier }}</td>
         <td class="px-2 py-2 text-sm font-medium text-gray-900 whitespace-nowrap">{{ pkg.tracking_number }}</td>
         <td class="px-2 py-2 text-sm text-gray-500 whitespace-nowrap">
           <TrackerStatus :status="pkg.status" />

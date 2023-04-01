@@ -36,6 +36,7 @@ class TrackerController extends Controller
             'tracker_id' => $data['tracker']['trackerId'],
             'status' => $data['events'][0]['statusMilestone'],
             'status_note' => $data['events'][0]['status'],
+            'courier' => $data['events'][0]['courierCode'],
         ]);
 
         return Redirect::route('dashboard');

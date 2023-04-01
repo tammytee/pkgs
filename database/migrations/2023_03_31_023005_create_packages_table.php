@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('tracker_id')->nullable();
             $table->enum('status', Package::STATUSES)->default(Package::STATUS_PENDING);
             $table->string('status_note')->nullable();
+            $table->string('courier')->nullable();
             $table->timestamps();
         });
     }
