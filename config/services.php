@@ -31,4 +31,7 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    'ship24' => [
+        'key' => env('SHIP24_API_KEY'),
+    ],
 ];
