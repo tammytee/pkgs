@@ -23,9 +23,9 @@
         </td>
         <td class="px-2 py-2 text-sm font-medium text-gray-900 whitespace-nowrap">{{ pkg.status_note }}</td>
         <td class="relative py-2 pl-3 pr-4 text-sm font-medium text-right whitespace-nowrap sm:pr-0">
-          <a href="#" class="text-indigo-600 hover:text-indigo-900"
+          <!-- <a href="#" class="text-indigo-600 hover:text-indigo-900"
             >Edit<span class="sr-only">, {{ pkg.id }}</span></a
-          >
+          > -->
         </td>
       </tr>
     </template>
