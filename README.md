@@ -2,6 +2,8 @@
 
 Quickly track the status of your packages using a tracking number with Pkgs (Powered by [Ship24](https://www.ship24.com/)).
 
+<img width="1297" alt="image" src="https://user-images.githubusercontent.com/8689444/229357723-e5777aa2-3889-4ca5-814b-e11dec176bba.png">
+
 ## Usage
 
 You may use the following credentials to log in and test the app:
